@@ -30,8 +30,10 @@ El sistema está desarrollado completamente en JavaScript puro (Vanilla JS), sin
 
 Se emplean APIs estándar del navegador para manipulación del DOM, manejo de eventos, almacenamiento local y descarga de archivos. El proyecto está diseñado para ejecutarse en cualquier navegador moderno sin configuración adicional.
 
-<img src="./Multimedia/sheetjs.png" width="400" alt="SheetJS">
+<div display="flex">
+  <img src="./Multimedia/sheetjs.png" width="400" alt="SheetJS">
 <img src="./Multimedia/javascript.png" width="400" alt="Javascript">
+</div>
 
 ## 5. Arquitectura del proyecto
 
