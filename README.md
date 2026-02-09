@@ -30,6 +30,9 @@ El sistema está desarrollado completamente en JavaScript puro (Vanilla JS), sin
 
 Se emplean APIs estándar del navegador para manipulación del DOM, manejo de eventos, almacenamiento local y descarga de archivos. El proyecto está diseñado para ejecutarse en cualquier navegador moderno sin configuración adicional.
 
+<img src="./Multimedia/sheetjs.png" width="400" alt="SheetJS">
+<img src="./Multimedia/javascript.png" width="400" alt="Javascript">
+
 ## 5. Arquitectura del proyecto
 
 La aplicación sigue una arquitectura modular, separando claramente las responsabilidades del sistema. La lógica de negocio, la manipulación de la interfaz, los servicios de carga y exportación de datos y los componentes de interacción están organizados en módulos independientes.
