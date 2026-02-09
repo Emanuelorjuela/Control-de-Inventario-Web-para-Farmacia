@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Configuración básica del documento -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Hoja de estilos principal del inventario -->
+	<link rel="stylesheet" href="./Src/style.css">
+	<link rel="shortcut icon" href="./Multimedia/icon.png" type="image/x-icon">
+
+	<title>Control de Inventario Web</title>
+</head>
+
+<body>
+
+	<!-- NAVBAR
+	     Contiene los controles principales del flujo de inventario:
+	     carga de Excel, escaneo, filtros y exportación -->
+	<nav class="nav">
+
+		<!-- Input para cargar archivo Excel (uso real en tienda) -->
+		<input type="file" class="input">
+
+		<!-- Input para escaneo de código de barras
+		     Se habilita solo después de cargar el Excel -->
+		<input
+			type="number"
+			class="input2 remove"
+			placeholder="Ingresa Codigo de Barras"
+		>
+
+		<!-- Filtro para ocultar filas con diferencia igual a 0 -->
+		<button class="ceros button remove">FILTRAR CEROS</button>
+
+		<!-- Elimina filas duplicadas cuando existe un registro válido -->
+		<button class="remover button remove">REMOVER REPETIDOS</button>
+
+		<!-- Restaura la tabla a su estado original -->
+		<button class="quitar button remove">QUITAR FILTROS</button>
+
+		<!-- Exporta el estado actual de la tabla a Excel -->
+		<button class="exportar button remove">DESCARGAR EXCEL</button>
+
+		<!-- Selector para filtrar por inicial de descripción -->
+		<select class="select select2 remove"></select>
+	</nav>
+
+	<!-- CONTENEDOR PRINCIPAL
+	     Envuelve la tabla y controla el layout general -->
+	<div class="container">
+		<div class="tablediv">
+
+			<!-- Tabla generada dinámicamente desde JS -->
+			<table class="table">
+				<thead class="thead"></thead>
+				<tbody class="tbody"></tbody>
+			</table>
+
+		</div>
+	</div>
+
+	<!-- Librerías necesarias para lectura y escritura de Excel -->
+	<script src="sheetjs.js"></script>
+	<script src="sheetjs2.js"></script>
+
+	<!-- Script principal (ES Modules) -->
+	<script type="module" src="./Src/main.js"></script>
+
+</body>
+</html>

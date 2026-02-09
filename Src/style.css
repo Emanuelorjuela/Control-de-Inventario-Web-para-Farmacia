@@ -1,0 +1,292 @@
+/* VARIABLES GLOBALES
+   Paleta de colores, radios y sombras reutilizables en toda la app */
+:root {
+	--primary: #137547;
+	--primary-dark: #0b5132;
+	--primary-light: #e6f4ee;
+
+	--bg: #eef2f1;
+	--surface: #ffffff;
+	--surface-alt: #f7faf9;
+
+	--border: #cfd8d3;
+
+	--text: #1f2d2a;
+	--muted: #6b7f78;
+
+	--success: #16a34a;
+	--warning: #d97706;
+	--danger: #b91c1c;
+
+	--radius: 10px;
+	--radius-lg: 14px;
+
+	--shadow-sm: 0 2px 6px rgba(0,0,0,0.06);
+	--shadow-md: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* RESET Y BASE
+   Normaliza estilos y define tipografía base */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	background-color: var(--bg);
+	color: var(--text);
+	min-height: 100vh;
+	overflow-x: hidden; /* evita scroll horizontal por la tabla */
+}
+
+/* NAVBAR
+   Barra superior fija con controles de la aplicación */
+.nav {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+	gap: 12px;
+
+	padding: 14px 18px;
+	background-color: var(--surface);
+	border-bottom: 1px solid var(--border);
+	box-shadow: var(--shadow-sm);
+}
+
+/* INPUTS Y SELECT
+   Estilos comunes para inputs de archivo, scanner y filtros */
+.input,
+.input2,
+select {
+	height: 44px;
+	border-radius: var(--radius);
+	border: 1px solid var(--border);
+	padding: 0 14px;
+	font-size: 14px;
+	background-color: white;
+	color: var(--text);
+	min-width: 0;
+}
+
+.input {
+	padding: 8px;
+	cursor: pointer;
+}
+
+/* Botón interno del input type="file" */
+.input::file-selector-button {
+	background-color: var(--primary);
+	border: none;
+	color: white;
+	padding: 6px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.input::file-selector-button:hover {
+	background-color: var(--primary-dark);
+}
+
+.input2::placeholder {
+	color: var(--muted);
+}
+
+/* BOTONES
+   Botones de acción principales y secundarios */
+.button {
+	height: 44px;
+	padding: 0 18px;
+	border-radius: var(--radius);
+	border: 1px solid var(--primary);
+	background-color: var(--primary);
+	color: white;
+
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.4px;
+
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+	background-color: var(--primary-dark);
+}
+
+/* Botones secundarios con fondo claro */
+.ceros,
+.remover,
+.quitar {
+	background-color: white;
+	color: var(--primary);
+}
+
+.ceros:hover,
+.remover:hover,
+.quitar:hover {
+	background-color: var(--primary-light);
+}
+
+/* CONTENEDOR PRINCIPAL
+   Centra la tabla en pantalla */
+.container {
+	padding: 14px;
+	display: flex;
+	justify-content: center;
+}
+
+/* CONTENEDOR DE TABLA
+   Permite scroll horizontal en móviles */
+.tablediv {
+	width: 95%;
+	max-width: 1400px;
+	background-color: var(--surface);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-md);
+
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* TABLA
+   Se fuerza ancho mínimo para permitir desplazamiento */
+.table {
+	width: max-content;
+	min-width: 100%;
+	border-collapse: collapse;
+	font-size: 13px;
+}
+
+/* HEADER DE TABLA
+   Fijo en la parte superior al hacer scroll */
+thead {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+}
+
+thead th {
+	background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+	color: white;
+	font-weight: 800;
+	padding: 14px 16px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 0.6px;
+	border-bottom: 2px solid var(--primary-dark);
+	white-space: nowrap;
+}
+
+/* CELDAS
+   Evita saltos de línea para mantener alineación */
+.th {
+	padding: 11px 14px;
+	border-bottom: 1px solid var(--border);
+	white-space: nowrap;
+}
+
+/* COLUMNAS IMPORTANTES
+   Resalta saldo, conteo y diferencias */
+tbody td:nth-child(6),
+thead th:nth-child(6) {
+	background-color: #f3f8f5;
+	font-weight: 700;
+}
+
+tbody td:nth-child(7),
+thead th:nth-child(7) {
+	background-color: #eef2ff;
+	font-weight: 800;
+}
+
+tbody td:nth-child(8),
+thead th:nth-child(8) {
+	background-color: #fff5f5;
+	font-weight: 800;
+}
+
+/* HOVER
+   Mejora la lectura fila por fila */
+tbody tr:hover {
+	background-color: var(--primary-light);
+}
+
+/* UTILIDADES
+   Oculta elementos dinámicamente desde JS */
+.remove {
+	display: none !important;
+}
+
+/* TABLET
+   Ajustes de densidad visual */
+@media (max-width: 1024px) {
+	.nav {
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	}
+
+	.table {
+		font-size: 12px;
+	}
+}
+
+/* MÓVIL
+   Inputs a ancho completo y columnas clave fijas */
+@media (max-width: 768px) {
+	.nav {
+		grid-template-columns: 1fr;
+	}
+
+	.button,
+	.input,
+	.input2,
+	select {
+		width: 100%;
+	}
+
+	thead th:first-child,
+	tbody td:first-child {
+		position: sticky;
+		left: 0;
+		z-index: 3;
+		background-color: var(--primary-dark);
+		color: white;
+	}
+
+	thead th:nth-child(2),
+	tbody td:nth-child(2) {
+		position: sticky;
+		left: 70px;
+		z-index: 2;
+		background-color: var(--primary);
+		color: white;
+	}
+
+	/* Celdas fijas con fondo claro para contraste */
+	tbody td:first-child,
+	tbody td:nth-child(2) {
+		background-color: #f0fdf4;
+		color: var(--text);
+	}
+}
+
+/* MÓVIL PEQUEÑO
+   Reduce padding y tipografía */
+@media (max-width: 480px) {
+	.table {
+		font-size: 11px;
+	}
+
+	thead th {
+		padding: 12px;
+	}
+
+	.th {
+		padding: 10px;
+	}
+}
