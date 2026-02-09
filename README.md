@@ -32,8 +32,8 @@ Se emplean APIs estándar del navegador para manipulación del DOM, manejo de ev
 
 <p display="flex" align="center">
 
-  <img src="./Multimedia/sheetjs.png" width="300" alt="SheetJS">
-  <img src="./Multimedia/javascript.png" width="300" alt="Javascript">
+  <img src="./Multimedia/sheetjs.png" width="270" margin="10px" alt="SheetJS">
+  <img src="./Multimedia/javascript.png" width="70" alt="Javascript">
 
 </p>
 
