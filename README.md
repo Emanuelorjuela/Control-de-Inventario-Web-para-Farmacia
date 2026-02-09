@@ -1,4 +1,4 @@
-# Control de Inventario Web
+# Control de Inventario Web Para Farmacia
 
 <p align="center">
   <img src="./Multimedia/icon.png" width="400" alt="Conteo por escaneo de códigos de barras">
