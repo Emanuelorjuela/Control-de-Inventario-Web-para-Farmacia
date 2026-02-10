@@ -98,7 +98,7 @@ Permite visualizar únicamente los productos cuya descripción comienza con una 
 En algunas maestras generadas por el sistema POS es común encontrar productos duplicados que comparten el mismo código interno pero poseen distintos códigos de barras. Este filtro identifica estos casos y conserva el registro que presenta conteo, eliminando aquel que no fue escaneado, evitando duplicados en los resultados finales.
 
 <p align="center">
-  <img src="./Multimedia/filtrarRepetidos.gif" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Multimedia/removerRepetidos.gif" width="700" alt="Conteo por escaneo de códigos de barras">
 </p>
 
 ### Quitar filtros
