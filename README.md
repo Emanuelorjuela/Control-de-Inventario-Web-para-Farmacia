@@ -1,5 +1,8 @@
 # Control de Inventario Web Para Farmacia
 
+**Deploy operativo (uso real en tienda):** https://inventariofarmaciav2.netlify.app/
+**Versión demostrativa (interactiva para usuarios):** https://inventariofarmaciav2.netlify.app/
+
 <p align="center">
   <img src="./Multimedia/icon.png" width="400" alt="Conteo por escaneo de códigos de barras">
 </p>
