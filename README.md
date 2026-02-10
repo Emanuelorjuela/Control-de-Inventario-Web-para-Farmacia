@@ -119,7 +119,7 @@ El sistema permite exportar los resultados a un nuevo archivo Excel en cualquier
 
 El formato del archivo exportado mantiene compatibilidad con la maestra original, lo que permite reutilizarlo como punto de guardado. Si este archivo se vuelve a cargar en la aplicación, el sistema puede continuar el proceso sin pérdida de información, funcionando como un respaldo del estado del inventario.
 
-Como parte del repositorio se incluye un archivo Excel de ejemplo con aproximadamente 1600 productos, pensado para fines de demostración y practicidad para reclutadores. No obstante, el sistema ha sido probado en entornos reales con inventarios de 4000 a 5000 productos, manteniendo un rendimiento estable y tiempos de respuesta adecuados durante el conteo y la aplicación de filtros.
+Como parte del repositorio se incluye un archivo Excel de ejemplo con aproximadamente 1600 productos, pensado para fines de demostración y practicidad para el usuario. No obstante, el sistema ha sido probado en entornos reales con inventarios de 4000 a 5000 productos, manteniendo un rendimiento estable y tiempos de respuesta adecuados durante el conteo y la aplicación de filtros.
 
 <p align="center">
   <img src="./Multimedia/descargarExcel.gif" width="700" alt="Conteo por escaneo de códigos de barras">
