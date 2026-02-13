@@ -27,7 +27,7 @@ export const dom = {
  - El usuario carga manualmente el Excel generado por VOPOS
    o descargado recientemente desde el sistema.
 
- En este proyecto visible para reclutadores:
+ En este proyecto visible para usuarios:
  - Se carga automáticamente un archivo Excel incluido en el repositorio
    para evitar descargas manuales y permitir ver el sistema funcionando
    apenas se abre la aplicación.
@@ -43,3 +43,4 @@ window.addEventListener("DOMContentLoaded", async () => {
 	// Inicialización del sistema completo
 	bootstrap(contenido, dom);
 });
+
