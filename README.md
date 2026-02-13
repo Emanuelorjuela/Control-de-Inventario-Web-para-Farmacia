@@ -143,7 +143,7 @@ A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincron
 
 Correo: emanuelorjuelabarbosa12@gmail.com
 
-Instagram: qubik_timer
+Instagram: https://www.instagram.com/emxneldev
 
 Este proyecto demuestra cómo una solución web ligera, desarrollada en JavaScript puro, puede resolver de forma efectiva un problema operativo real en entornos de retail. La aplicación optimiza el proceso de inventario físico, reduce errores humanos y mejora la lectura de resultados en tiempo real, manteniendo un rendimiento estable incluso con inventarios de gran tamaño.
 
