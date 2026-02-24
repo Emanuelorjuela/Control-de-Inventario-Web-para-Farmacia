@@ -142,33 +142,31 @@ A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincron
 ```bash
 git clone https://github.com/Emanuelorjuela/control-inventario-web.git
 ```
-Ejecución
+### Ejecución
 
 El proyecto no requiere instalación de dependencias ni servidor backend.
 
-Puede ejecutarse de dos formas:
+El proyecto se ejecuta:
 
-Abriendo directamente el archivo index.html en el navegador.
+· Abriendo directamente el archivo index.html en el navegador.
 
-Utilizando una extensión como Live Server en VS Code para simular entorno local.
-
-Requisitos mínimos
+### Requisitos mínimos
 
 Navegador moderno (Chrome, Edge, Firefox).
 
 Soporte para ES6.
 
-Permisos para carga de archivos locales (input type="file").
+Permisos para carga de archivos locales (input type="file")
 
-Notas importantes
+### Notas importantes
 
-El proyecto funciona completamente offline.
+· El proyecto funciona completamente offline.
 
-SheetJS está incluida localmente en el repositorio.
+· SheetJS está incluida localmente en el repositorio.
 
-Se incluye un archivo Excel de ejemplo para pruebas.
+· Se incluye un archivo Excel de ejemplo para pruebas.
 
-Para uso en entorno real, se debe cargar la maestra exportada desde VOPOS.
+· Para uso en entorno real, se debe cargar la maestra exportada desde VOPOS.
 
 ## 12. Autor
 
@@ -176,7 +174,7 @@ Para uso en entorno real, se debe cargar la maestra exportada desde VOPOS.
 
 Correo: emanuelorjuelabarbosa12@gmail.com
 
-Instagram: https://www.instagram.com/emxneldev
+Instagram: https://www.instagram.com/qubik_timer
 
 Este proyecto demuestra cómo una solución web ligera, desarrollada en JavaScript puro, puede resolver de forma efectiva un problema operativo real en entornos de retail. La aplicación optimiza el proceso de inventario físico, reduce errores humanos y mejora la lectura de resultados en tiempo real, manteniendo un rendimiento estable incluso con inventarios de gran tamaño.
 
