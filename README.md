@@ -152,11 +152,11 @@ El proyecto se ejecuta:
 
 ### Requisitos mínimos
 
-Navegador moderno (Chrome, Edge, Firefox).
+· Navegador moderno (Chrome, Edge, Firefox).
 
-Soporte para ES6.
+· Soporte para ES6.
 
-Permisos para carga de archivos locales (input type="file")
+· Permisos para carga de archivos locales (input type="file")
 
 ### Notas importantes
 
@@ -175,6 +175,8 @@ Permisos para carga de archivos locales (input type="file")
 Correo: emanuelorjuelabarbosa12@gmail.com
 
 Instagram: https://www.instagram.com/qubik_timer
+
+Github: https://github.com/Emanuelorjuela
 
 Este proyecto demuestra cómo una solución web ligera, desarrollada en JavaScript puro, puede resolver de forma efectiva un problema operativo real en entornos de retail. La aplicación optimiza el proceso de inventario físico, reduce errores humanos y mejora la lectura de resultados en tiempo real, manteniendo un rendimiento estable incluso con inventarios de gran tamaño.
 
