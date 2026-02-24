@@ -140,7 +140,8 @@ A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincron
 ### Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU-USUARIO/control-inventario-web.git
+git clone https://github.com/Emanuelorjuela/control-inventario-web.git
+```
 Ejecución
 
 El proyecto no requiere instalación de dependencias ni servidor backend.
