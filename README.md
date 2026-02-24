@@ -137,10 +137,37 @@ A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincron
 
 ## 11. Instalación y Ejecución
 
-# Clonar el repositorio
+### Clonar el repositorio
 
-bash
+```bash
 git clone https://github.com/TU-USUARIO/control-inventario-web.git
+Ejecución
+
+El proyecto no requiere instalación de dependencias ni servidor backend.
+
+Puede ejecutarse de dos formas:
+
+Abriendo directamente el archivo index.html en el navegador.
+
+Utilizando una extensión como Live Server en VS Code para simular entorno local.
+
+Requisitos mínimos
+
+Navegador moderno (Chrome, Edge, Firefox).
+
+Soporte para ES6.
+
+Permisos para carga de archivos locales (input type="file").
+
+Notas importantes
+
+El proyecto funciona completamente offline.
+
+SheetJS está incluida localmente en el repositorio.
+
+Se incluye un archivo Excel de ejemplo para pruebas.
+
+Para uso en entorno real, se debe cargar la maestra exportada desde VOPOS.
 
 ## 12. Autor
 
