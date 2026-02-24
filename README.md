@@ -1,7 +1,5 @@
 # Control de Inventario Web para Farmacia
 
-**Deploy operativo (uso real en tienda):** https://inventariofarmacia.netlify.app/
-
 **Versión demostrativa (interactiva para usuarios):** https://inventariofarmaciav2.netlify.app/
 
 <p align="center">
@@ -137,7 +135,14 @@ Aunque el proyecto funciona actualmente como una aplicación local y offline, su
 
 A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincronizar ventas y ajustes de stock en tiempo real y ofrecer funcionalidades avanzadas como reportes históricos, análisis de rotación, alertas de quiebre de stock y soporte para múltiples sucursales. Esto posiciona el proyecto como una base sólida para una solución comercial escalable y reutilizable.
 
-## 11. Autor
+## 11. Instalación y Ejecución
+
+# Clonar el repositorio
+
+bash
+git clone https://github.com/TU-USUARIO/control-inventario-web.git
+
+## 12. Autor
 
 **Emanuel Orjuela Barbosa**
 
