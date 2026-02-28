@@ -28,5 +28,6 @@ dom.input.addEventListener("change", async (e) => {
 });
 
 // Nota sobre la versión interactiva:
-// En la demo o versión interactiva para reclutadores, no es necesario que el usuario cargue un Excel.
+// En la versión interactiva para usuarios, no es necesario que el usuario cargue un Excel.
 // En ese caso, se carga un archivo Excel por defecto incluido en el repositorio y la tabla se renderiza automáticamente.
+
