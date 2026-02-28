@@ -138,10 +138,19 @@ A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincron
 ## 11. Instalación y Ejecución
 
 ### Clonar el repositorio
+· Asegúrate de tener Git instalado en tu máquina.
 
+· Abre una terminal o consola.
+
+· Ejecuta este comando:
 ```bash
 git clone https://github.com/Emanuelorjuela/control-inventario-web.git
 ```
+Luego entra a la carpeta del proyecto:
+```bash
+cd Control-de-Inventario-Web-para-Farmacia
+```
+
 ### Ejecución
 
 El proyecto no requiere instalación de dependencias ni servidor backend.
