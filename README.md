@@ -174,7 +174,7 @@ El proyecto se ejecuta:
 
 Correo: emanuelorjuelabarbosa12@gmail.com
 
-Instagram: https://www.instagram.com/qubik_timer
+Instagram: https://www.instagram.com/emx.dev
 
 Github: https://github.com/Emanuelorjuela
 
