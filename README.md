@@ -135,49 +135,7 @@ Aunque el proyecto funciona actualmente como una aplicación local y offline, su
 
 A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincronizar ventas y ajustes de stock en tiempo real y ofrecer funcionalidades avanzadas como reportes históricos, análisis de rotación, alertas de quiebre de stock y soporte para múltiples sucursales. Esto posiciona el proyecto como una base sólida para una solución comercial escalable y reutilizable.
 
-## 11. Instalación y Ejecución
-
-### Clonar el repositorio
-· Asegúrate de tener Git instalado en tu máquina.
-
-· Abre una terminal o consola.
-
-· Ejecuta este comando:
-```bash
-git clone https://github.com/Emanuelorjuela/control-inventario-web.git
-```
-Luego entra a la carpeta del proyecto:
-```bash
-cd Control-de-Inventario-Web-para-Farmacia
-```
-
-### Ejecución
-
-El proyecto no requiere instalación de dependencias ni servidor backend.
-
-El proyecto se ejecuta:
-
-· Abriendo directamente el archivo index.html en el navegador.
-
-### Requisitos mínimos
-
-· Navegador moderno (Chrome, Edge, Firefox).
-
-· Soporte para ES6.
-
-· Permisos para carga de archivos locales (input type="file")
-
-### Notas importantes
-
-· El proyecto funciona completamente offline.
-
-· SheetJS está incluida localmente en el repositorio.
-
-· Se incluye un archivo Excel de ejemplo para pruebas.
-
-· Para uso en entorno real, se debe cargar la maestra exportada desde VOPOS.
-
-## 12. Autor
+## 11. Autor
 
 **Emanuel Orjuela Barbosa**
 
