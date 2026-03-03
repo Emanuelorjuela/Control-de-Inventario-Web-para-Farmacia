@@ -12,7 +12,7 @@ Sistema de conciliación de inventario para retail desarrollado en JavaScript pu
 
 ## 1. Descripción general del proyecto
 
-Control de Inventario Web es una aplicación web que se ejecuta directamente en el navegador y permite conciliar inventario físico contra inventario teórico exportado desde un sistema POS (VOPOS). El sistema está diseñado para funcionar de manera offline, sin dependencias de backend ni frameworks, y prioriza la velocidad operativa, la claridad visual y la reducción de errores durante el conteo físico.
+Control de Inventario Web es una aplicación web que se ejecuta directamente en el navegador y permite conciliar inventario físico contra inventario teórico exportado desde un sistema POS (VOPOS). El sistema está diseñado para funcionar sin dependencias de backend ni frameworks, y prioriza la velocidad operativa, la claridad visual y la reducción de errores durante el conteo físico.
 
 El proyecto está pensado tanto como herramienta real de uso operativo en tienda como demostración técnica para evaluación profesional, mostrando control total del DOM, manejo de datos estructurados y lógica de negocio aplicada a un problema real.
 
@@ -30,7 +30,7 @@ La solución elimina la necesidad de anotaciones manuales, cálculos mentales o 
 
 ## 4. Tecnologías utilizadas
 
-El sistema está desarrollado completamente en JavaScript puro (Vanilla JS), sin frameworks ni librerías de UI. Para la lectura y exportación de archivos Excel se utiliza SheetJS, incluida directamente en el repositorio, lo que permite el funcionamiento offline.
+El sistema está desarrollado completamente en JavaScript puro (Vanilla JS), sin frameworks ni librerías de UI. Para la lectura y exportación de archivos Excel se utiliza SheetJS, incluida directamente en el repositorio.
 
 Se emplean APIs estándar del navegador para manipulación del DOM, manejo de eventos, almacenamiento local y descarga de archivos. El proyecto está diseñado para ejecutarse en cualquier navegador moderno sin configuración adicional.
 
@@ -133,9 +133,9 @@ Ejemplo del excel descargado:
 
 ## 10. Escalabilidad y proyección
 
-Aunque el proyecto funciona actualmente como una aplicación local y offline, su diseño permite una evolución natural hacia una arquitectura más robusta. Es posible incorporar autenticación de usuarios, almacenamiento en la nube y un backend en Node.js para persistencia de datos y gestión multiusuario.
+Aunque el proyecto funciona actualmente como una aplicación local, su diseño permite una evolución natural hacia una arquitectura más robusta. Es posible incorporar autenticación de usuarios, almacenamiento en la nube y un backend en Node.js para persistencia de datos y gestión multiusuario.
 
-A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincronizar ventas y ajustes de stock en tiempo real y ofrecer funcionalidades avanzadas como reportes históricos, análisis de rotación, alertas de quiebre de stock y soporte para múltiples sucursales. Esto posiciona el proyecto como una base sólida para una solución comercial escalable y reutilizable.
+A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincronizar ventas y ajustes de stock en tiempo real y ofrecer funcionalidades avanzadas como reportes históricos, alertas de quiebre de stock y soporte para múltiples sucursales. Esto posiciona el proyecto como una base sólida para una solución comercial escalable y reutilizable.
 
 ## 11. Autor
 
