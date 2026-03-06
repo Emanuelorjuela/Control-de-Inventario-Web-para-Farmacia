@@ -65,13 +65,13 @@ The count increment is not fixed. The system analyzes the unit of measurement an
 
 Each update automatically recalculates the difference between the master balance and the real count, visually highlighting the results for immediate interpretation.
 
-Example of BOX X 50 with unit of measure TABLET:
+Example of CAJA X 50 with unit of measure TABLETA:
 
 <p align="center">
   <img src="./Src/Multimedia/cajaxtableta.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-Example of BOX X 100 with unit of measure BOX:
+Example of CAJA X 100 with unit of measure CAJA:
 
 <p align="center">
   <img src="./Src/Multimedia/cajaxcaja.gif" width="700" alt="Counting through barcode scanning">
