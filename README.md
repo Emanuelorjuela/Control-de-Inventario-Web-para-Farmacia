@@ -1,38 +1,38 @@
-# Control de Inventario Web para Farmacia
+# Web Inventory Control for Pharmacy
 
-**Deploy para uso real (en farmacia):** https://inventariofarmacia.netlify.app/
+**Deploy for real use (in pharmacy):** https://inventariofarmacia.netlify.app/
 
-**Deploy de versión demostrativa (interactiva para usuarios):** https://inventariofarmaciav2.netlify.app/
+**Demo version deploy (interactive for users):** https://inventariofarmaciav2.netlify.app/
 
 <p align="center">
-  <img src="./Src/Multimedia/icon.png" width="400" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/icon.png" width="400" alt="Counting through barcode scanning">
 </p>
 
-Sistema de conciliación de inventario para retail desarrollado en JavaScript puro, orientado a pequeños y medianos comercios, con foco en farmacias y entornos que trabajan con inventarios basados en archivos Excel y pistolas de códigos de barras.
+Retail inventory reconciliation system developed in pure JavaScript, oriented toward small and medium-sized businesses, with a focus on pharmacies and environments that work with Excel-based inventories and barcode scanners.
 
-## 1. Descripción general del proyecto
+## 1. General project description
 
-Control de Inventario Web es una aplicación web que se ejecuta directamente en el navegador y permite conciliar inventario físico contra inventario teórico exportado desde un sistema POS (VOPOS). El sistema está diseñado para funcionar sin dependencias de backend ni frameworks, y prioriza la velocidad operativa, la claridad visual y la reducción de errores durante el conteo físico.
+Web Inventory Control is a web application that runs directly in the browser and allows physical inventory to be reconciled against theoretical inventory exported from a POS system (VOPOS). The system is designed to work without backend dependencies or frameworks, prioritizing operational speed, visual clarity, and error reduction during physical counting.
 
-El proyecto está pensado tanto como herramienta real de uso operativo en tienda como demostración técnica para evaluación profesional, mostrando control total del DOM, manejo de datos estructurados y lógica de negocio aplicada a un problema real.
+The project is designed both as a real operational tool for in-store use and as a technical demonstration for professional evaluation, showcasing full DOM control, structured data handling, and business logic applied to a real-world problem.
 
-## 2. Problema que resuelve
+## 2. Problem it solves
 
-En el proceso tradicional de inventario en farmacias y comercios similares, el personal debe recorrer la tienda con una lista impresa o digital y verificar manualmente, producto por producto, si las cantidades físicas coinciden con las registradas en el sistema. Este método es lento, propenso a errores humanos y poco eficiente cuando se manejan cientos o miles de referencias.
+In the traditional inventory process in pharmacies and similar businesses, staff must walk through the store with a printed or digital list and manually verify, product by product, whether the physical quantities match those recorded in the system. This method is slow, prone to human error, and inefficient when dealing with hundreds or thousands of product references.
 
-Además, este enfoque no permite visualizar de forma clara las diferencias, los productos faltantes, los sobrantes ni las inconsistencias generadas por duplicados o errores en la maestra de inventario. El resultado suele ser un proceso largo, con reprocesos y bajo nivel de confiabilidad.
+Additionally, this approach does not allow clear visualization of discrepancies, missing products, excess stock, or inconsistencies caused by duplicates or errors in the inventory master file. The result is usually a long process with rework and low reliability.
 
-## 3. Solución implementada
+## 3. Implemented solution
 
-El proyecto propone una solución de conciliación automatizada basada en escaneo de códigos de barras y procesamiento directo de la maestra de inventario en Excel. A partir de un único archivo exportado desde VOPOS, el sistema permite realizar el conteo físico en tiempo real, recalcular diferencias automáticamente y presentar los resultados de forma visual e inmediata.
+The project proposes an automated reconciliation solution based on barcode scanning and direct processing of the inventory master Excel file. Using a single file exported from VOPOS, the system allows physical counting in real time, automatically recalculates differences, and presents the results visually and immediately.
 
-La solución elimina la necesidad de anotaciones manuales, cálculos mentales o verificaciones posteriores, permitiendo detectar inconsistencias en el mismo momento en que ocurren y reduciendo significativamente el tiempo total del inventario.
+The solution eliminates the need for manual notes, mental calculations, or later verification, allowing inconsistencies to be detected at the moment they occur and significantly reducing the total time required for inventory.
 
-## 4. Tecnologías utilizadas
+## 4. Technologies used
 
-El sistema está desarrollado completamente en JavaScript puro (Vanilla JS), sin frameworks ni librerías de UI. Para la lectura y exportación de archivos Excel se utiliza SheetJS, incluida directamente en el repositorio.
+The system is developed entirely in pure JavaScript (Vanilla JS), without frameworks or UI libraries. SheetJS is used for reading and exporting Excel files and is included directly in the repository.
 
-Se emplean APIs estándar del navegador para manipulación del DOM, manejo de eventos, almacenamiento local y descarga de archivos. El proyecto está diseñado para ejecutarse en cualquier navegador moderno sin configuración adicional.
+Standard browser APIs are used for DOM manipulation, event handling, local storage, and file downloads. The project is designed to run in any modern browser without additional configuration.
 
 <p display="flex" align="center">
 
@@ -41,113 +41,111 @@ Se emplean APIs estándar del navegador para manipulación del DOM, manejo de ev
 
 </p>
 
-## 5. Arquitectura del proyecto
+## 5. Project architecture
 
-La aplicación sigue una arquitectura modular, separando claramente las responsabilidades del sistema. La lógica de negocio, la manipulación de la interfaz, los servicios de carga y exportación de datos y los componentes de interacción están organizados en módulos independientes.
+The application follows a modular architecture, clearly separating system responsibilities. Business logic, interface manipulation, data loading and exporting services, and interaction components are organized into independent modules.
 
-Esta estructura facilita el mantenimiento, la lectura del código y la incorporación de nuevas funcionalidades, además de demostrar un enfoque profesional en la organización del frontend sin depender de frameworks.
+This structure facilitates maintenance, code readability, and the addition of new features, while also demonstrating a professional approach to frontend organization without relying on frameworks.
 
-## 6. Flujo de funcionamiento
+## 6. Workflow
 
-El flujo general comienza con la carga de la maestra de inventario en formato Excel. En la versión pública del proyecto, el archivo se carga automáticamente desde el repositorio para facilitar la experiencia de demostración. En un entorno real de tienda, el archivo sería cargado mediante un input de tipo archivo.
+The general flow begins with loading the inventory master file in Excel format. In the public version of the project, the file loads automatically from the repository to simplify the demonstration experience. In a real store environment, the file would be loaded through a file input.
 
-Una vez cargado, el sistema procesa los datos y los renderiza en una tabla HTML enriquecida, agregando columnas adicionales necesarias para la conciliación, como conteo real y diferencia. A partir de este punto, el usuario puede iniciar el conteo físico mediante escaneo de productos con la pistola de códigos de barras.
-
-<p align="center">
-  <img src="./Src/Multimedia/cargarExcel.gif" width="700" alt="Conteo por escaneo de códigos de barras">
-</p>
-
-## 7. Gestión de inventario y lógica de negocio
-
-El núcleo del sistema es el conteo por escaneo de códigos de barras. La pistola funciona como un teclado, ingresando el código directamente en un campo dedicado. Cuando el código coincide con un producto de la tabla, el sistema localiza la fila correspondiente y actualiza el conteo.
-
-El incremento del conteo no es fijo. El sistema analiza la unidad de medida y la descripción del producto para determinar cuántas unidades reales deben sumarse. Por ejemplo, un producto descrito como "CAJ X 30" incrementa el conteo en 30 unidades si la unidad base es tableta, mientras que productos contados por caja incrementan en una sola unidad. Esta lógica permite reflejar con precisión la realidad física del inventario.
-
-Cada actualización recalcula automáticamente la diferencia entre el saldo de la maestra y el conteo real, resaltando visualmente los resultados para una interpretación inmediata.
-
-Ejemplo de CAJA X 50 con unidad de medida TABLETA:
+Once loaded, the system processes the data and renders it into an enriched HTML table, adding additional columns necessary for reconciliation such as real count and difference. From this point, the user can begin the physical counting process by scanning products using the barcode scanner.
 
 <p align="center">
-  <img src="./Src/Multimedia/cajaxtableta.gif" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/cargarExcel.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-Ejemplo de CAJA X 100 con unidad de medida CAJA:
+## 7. Inventory management and business logic
+
+The core of the system is counting through barcode scanning. The scanner works as a keyboard, entering the code directly into a dedicated field. When the code matches a product in the table, the system locates the corresponding row and updates the count.
+
+The count increment is not fixed. The system analyzes the unit of measurement and the product description to determine how many real units should be added. For example, a product described as "BOX X 30" increases the count by 30 units if the base unit is tablet, while products counted by box increase by a single unit. This logic allows the physical reality of the inventory to be represented accurately.
+
+Each update automatically recalculates the difference between the master balance and the real count, visually highlighting the results for immediate interpretation.
+
+Example of BOX X 50 with unit of measure TABLET:
 
 <p align="center">
-  <img src="./Src/Multimedia/cajaxcaja.gif" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/cajaxtableta.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-## 8. Filtros y herramientas de análisis
-
-El sistema incorpora filtros específicos pensados para el análisis de inventario y la limpieza de datos una vez finalizado el conteo. Cada filtro está diseñado para resolver un problema concreto del proceso operativo y puede utilizarse de forma independiente o combinada.
-
-### Filtro de diferencias en cero
-
-Este filtro oculta todos los productos cuya diferencia entre el saldo de la maestra y el conteo real es igual a cero. Su objetivo es reducir el ruido visual y permitir que el usuario se concentre únicamente en los productos con inconsistencias reales.
+Example of BOX X 100 with unit of measure BOX:
 
 <p align="center">
-  <img src="./Src/Multimedia/filtrarCeros.gif" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/cajaxcaja.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-### Filtro alfabético por descripción
+## 8. Filters and analysis tools
 
-Permite visualizar únicamente los productos cuya descripción comienza con una letra específica. Este filtro resulta útil para búsquedas puntuales o verificaciones dirigidas dentro de inventarios extensos.
+The system includes specific filters designed for inventory analysis and data cleanup after counting is completed. Each filter is designed to solve a specific operational problem and can be used independently or combined.
+
+### Zero difference filter
+
+This filter hides all products whose difference between the master balance and the real count is equal to zero. Its objective is to reduce visual noise and allow the user to focus only on products with real inconsistencies.
 
 <p align="center">
-  <img src="./Src/Multimedia/filtarLetra.gif" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/filtrarCeros.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-### Filtro de eliminación de productos duplicados
+### Alphabetical filter by description
 
-En algunas maestras generadas por el sistema POS es común encontrar productos duplicados que comparten el mismo código interno pero poseen distintos códigos de barras. Este filtro identifica estos casos y conserva el registro que presenta conteo, eliminando aquel que no fue escaneado, evitando duplicados en los resultados finales.
+Allows the user to view only products whose description begins with a specific letter. This filter is useful for targeted searches or directed verification within large inventories.
 
 <p align="center">
-  <img src="./Src/Multimedia/removerRepetidos.gif" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/filtarLetra.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-### Quitar filtros
+### Duplicate product removal filter
 
-Restaura la visualización original de la tabla, eliminando cualquier filtro activo y devolviendo el inventario a su estado completo.
+In some master files generated by POS systems, it is common to find duplicate products that share the same internal code but have different barcodes. This filter identifies these cases and keeps the record that contains a count, removing the one that was not scanned, preventing duplicates in the final results.
 
 <p align="center">
-  <img src="./Src/Multimedia/quitarFiltros.gif" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/removerRepetidos.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-## 9. Persistencia, respaldo y exportación
+### Remove filters
 
-El sistema permite exportar los resultados a un nuevo archivo Excel en cualquier momento. El archivo generado refleja exactamente lo que el usuario está visualizando en pantalla, respetando los filtros activos y el estado actual del inventario.
-
-El formato del archivo exportado mantiene compatibilidad con la maestra original, lo que permite reutilizarlo como punto de guardado. Si este archivo se vuelve a cargar en la aplicación, el sistema puede continuar el proceso sin pérdida de información, funcionando como un respaldo del estado del inventario.
-
-Como parte del repositorio se incluye un archivo Excel de ejemplo con aproximadamente 1600 productos, pensado para fines de demostración y practicidad para el usuario. No obstante, el sistema ha sido probado en entornos reales con inventarios de 4000 a 5000 productos, manteniendo un rendimiento estable y tiempos de respuesta adecuados durante el conteo y la aplicación de filtros.
+Restores the original table view by removing any active filters and returning the inventory to its full state.
 
 <p align="center">
-  <img src="./Src/Multimedia/descargarExcel.gif" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/quitarFiltros.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-Ejemplo del excel descargado:
+## 9. Persistence, backup, and export
+
+The system allows results to be exported to a new Excel file at any time. The generated file reflects exactly what the user is seeing on screen, respecting active filters and the current state of the inventory.
+
+The exported file format maintains compatibility with the original master file, allowing it to be reused as a save point. If this file is loaded again into the application, the system can continue the process without losing information, functioning as a backup of the inventory state.
+
+As part of the repository, an example Excel file with approximately 1600 products is included, intended for demonstration purposes and user convenience. However, the system has been tested in real environments with inventories of 4000 to 5000 products, maintaining stable performance and adequate response times during counting and filter application.
 
 <p align="center">
-  <img src="./Src/Multimedia/excelDescargado.png" width="700" alt="Conteo por escaneo de códigos de barras">
+  <img src="./Src/Multimedia/descargarExcel.gif" width="700" alt="Counting through barcode scanning">
 </p>
 
-## 10. Escalabilidad y proyección
+Example of the downloaded Excel file:
 
-Aunque el proyecto funciona actualmente como una aplicación local, su diseño permite una evolución natural hacia una arquitectura más robusta. Es posible incorporar autenticación de usuarios, almacenamiento en la nube y un backend en Node.js para persistencia de datos y gestión multiusuario.
+<p align="center">
+  <img src="./Src/Multimedia/excelDescargado.png" width="700" alt="Counting through barcode scanning">
+</p>
 
-A futuro, el sistema podría integrarse directamente con POS como VOPOS, sincronizar ventas y ajustes de stock en tiempo real y ofrecer funcionalidades avanzadas como reportes históricos, alertas de quiebre de stock y soporte para múltiples sucursales. Esto posiciona el proyecto como una base sólida para una solución comercial escalable y reutilizable.
+## 10. Scalability and projection
 
-## 11. Autor
+Although the project currently functions as a local application, its design allows for natural evolution toward a more robust architecture. It is possible to incorporate user authentication, cloud storage, and a Node.js backend for data persistence and multi-user management.
+
+In the future, the system could integrate directly with POS systems such as VOPOS, synchronize sales and stock adjustments in real time, and offer advanced features such as historical reports, stock shortage alerts, and support for multiple branches. This positions the project as a solid foundation for a scalable and reusable commercial solution.
+
+## 11. Author
 
 **Emanuel Orjuela Barbosa**
 
-Correo: emanuelorjuelabarbosa12@gmail.com
+Email: emanuelorjuelabarbosa12@gmail.com
 
 Instagram: https://www.instagram.com/emx.dev
 
 Github: https://github.com/Emanuelorjuela
 
-Este proyecto demuestra cómo una solución web ligera, desarrollada en JavaScript puro, puede resolver de forma efectiva un problema operativo real en entornos de retail. La aplicación optimiza el proceso de inventario físico, reduce errores humanos y mejora la lectura de resultados en tiempo real, manteniendo un rendimiento estable incluso con inventarios de gran tamaño.
-
-
+This project demonstrates how a lightweight web solution developed in pure JavaScript can effectively solve a real operational problem in retail environments. The application optimizes the physical inventory process, reduces human errors, and improves real-time interpretation of results while maintaining stable performance even with large inventories.
 
